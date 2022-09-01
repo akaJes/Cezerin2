@@ -763,7 +763,7 @@ ajaxRouter.get("/pages/:id", async ctx => {
 
 ajaxRouter.get("/sitemap", async ctx => {
   let result = null
-  const filter = ctx.params
+  const filter = ctx.query
   filter.enabled = "true"
 
   const sitemapResponse = await api.sitemap.retrieve(filter)
